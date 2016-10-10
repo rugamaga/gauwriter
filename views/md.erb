@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title><%= @title %></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/css/github-markdown.css" type="text/css" />
+    <link rel="stylesheet" href="/css/codehighlight.css" type="text/css" />
+</head>
+<body>
+<div id="site">
+    <div id="post">
+        <%= @body %>
+        <div id="footer">© 2016 gaura</div>
+    </div>
+</div>
+<script>
+    renderMathInElement(
+        document.getElementById("post"),
+        {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$",  right: "$",  display: false}
+            ]
+        }
+    );
+</script>
+</body>
+</html>
