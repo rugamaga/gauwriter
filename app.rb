@@ -108,6 +108,10 @@ not_found do
   'Not found'
 end
 
+get /^(\/.*)\/$/ do |path|
+  redirect path
+end
+
 get '/*' do |path|
   extname = File.extname(path)
 
