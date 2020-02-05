@@ -108,7 +108,7 @@ not_found do
   'Not found'
 end
 
-get /^(\/.*)\/$/ do |path|
+get /(\/.*)\// do |path|
   redirect path
 end
 
